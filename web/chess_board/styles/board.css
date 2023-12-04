@@ -8,13 +8,13 @@ body {
 
   .chessboard {
     display: grid;
-    grid-template-columns: repeat(8, 50px);
-    grid-template-rows: repeat(8, 50px);
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(8, 70px);
   }
 
   .chessboard div {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,5 +30,5 @@ body {
   }
 
   img {
-    width: 3vw;
+    width: 4vw;
   }
