@@ -1,6 +1,7 @@
 # How to use
 board.html should be opened as a server! Not as a file!
-
+If you want to open it as a file go to ```board.html``` and edit line 71 by commenting it
+To comment add ```//``` before the line
 
 # Open with Visual Studio Code
 Open Visual Studio Code and go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window. Search for "Live Server" and install the one provided by Ritwick Dey.
