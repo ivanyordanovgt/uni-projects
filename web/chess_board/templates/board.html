@@ -14,27 +14,45 @@
 </body>
 
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const chessboard = document.querySelector('.chessboard');
-  
-      for (let row = 0; row < 8; row++) {
+<script type="module">
+  import {chessData} from '../public/chessData.js'
+  document.addEventListener('DOMContentLoaded', function () {
+    const chessboard = document.querySelector('.chessboard');
+    const layout = ['rook', 'knight', 'bishop', 'queen', 'king', 'rook', 'knight', 'bishop', 'queen']
+    for (let row = 0; row < 8; row++) {
       for (let col = 0; col < 8; col++) {
         const square = document.createElement('div');
         square.classList.add((row + col) % 2 === 0 ? 'dark' : 'light');
         
-        if (row == 1) {
-          square.textContent = '♙'; // Black piece
-          square.style.color = 'white'
-        } else if (row==6) {
-          square.textContent = '♟️'; // White piece
+        if (row === 1) {
+          const blackPawn = document.createElement('img');
+          blackPawn.src = chessData['figureImages']['black']['pawn'];
+          square.appendChild(blackPawn);
+        } 
+        
+        else if (row === 6) {
+          const whitePawn = document.createElement('img');
+          whitePawn.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBmaWxsPSJub25lIj48cGF0aCBmaWxsPSIjMDAxNzNDIiBkPSJNMzg4LjI1IDQ4Ny4yMzdjOS42ODIgMCAxNi44MjctOS4wMzUgMTQuNTk2LTE4LjQ1NmwtMTUuNzAzLTY2LjMxOGMtMS41NjQtNy4yMjctOC44MzgtMTIuOTQzLTE2LjI5MS0xMi45NDNoLTIyLjkxNWwtNjguMjgzLTI1MS4yOTljLS41MTktNS42ODgtMTYuMjM4LTcuMjIxLTI1LjU4MS03LjIyMXMtMjUuMDY1IDEuNTMzLTI1LjU5IDcuMjIxTDE2MC4yMTEgMzg5LjUyaC0yMC40NTljLTcuNDU1IDAtMTQuNzMzIDUuNzE2LTE2LjI3NyAxMi45NDNsLTE1LjA5NiA2Ni40NTFjLTIuMTMyIDkuMzg3IDUuMDAyIDE4LjMyMyAxNC42MjcgMTguMzIzSDM4OC4yNVoiLz48cGF0aCBmaWxsPSIjRkY5Q0FFIiBkPSJNMjQzLjI1IDE0NC43OWMzLjYyNi43NSAxMy4wOTkgMS43OTUgMjEuOTg1LS4wMjRsOS45ODggMzYuNzk3Yy0xNi4yMTggMy42NzctMzQuNzE0IDEuNTMyLTQxLjkzNSAwbDkuOTYyLTM2Ljc3M1pNMjMwLjA3MSAxOTMuNDM3bC0yOC44NDkgMTA2LjQ4OWMxOS45MjEgNC45NzkgNjkuMDM2IDExLjk1MSAxMDYuMTMgMGwtMjguOTA5LTEwNi41MDFjLTE4LjIzOCAzLjk3NC0zOS44NDggMS42NjQtNDguMzcyLjAxMloiLz48cGF0aCBmaWxsPSIjRkY5Q0FFIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zMTAuNjc5IDMxMi4xODNjLTQ4LjEzOCAxMy4xNzctOTUuMjQzIDUuNDkxLTExMi43NzcgMGwtMjUuNTI4IDk0LjIzMS0zMS4zNC0uMTg0Yy0xLjEzOSAwLTMuODA2IDEuODU0LTUuMzY4IDkuMjcyLTEuNTYyIDcuNDE3LTcuNDgzIDM0LjMyMi0xMC4yNDggNDYuODQ4LS40ODggMi42MDIuODc4IDcuOTA1IDEwLjI0OCA4LjI5NiA5LjM3LjM5IDgzLjI4NS4xNjIgMTE5LjA3MSAwaC40MDNjMzUuNzg2LjE2MiAxMDkuNzAxLjM5IDExOS4wNzEgMCA5LjM2OS0uMzkxIDEwLjczNi01LjY5NCAxMC4yNDgtOC4yOTYtMi43NjYtMTIuNTI2LTguNjg3LTM5LjQzMS0xMC4yNDgtNDYuODQ4LTEuNTYyLTcuNDE4LTQuMjMtOS4yNzItNS4zNjgtOS4yNzJsLTMyLjU4Ni4xODQtMjUuNTc4LTk0LjIzMVpNMTYxLjYwMyA0MjMuNzk4YzEuODIgMTMuMTQgNDIuNTcxIDIzLjY2MiA5Mi42MDggMjMuNjYyIDUwLjA0NCAwIDkwLjgwMy0xMC41MTkgOTIuNjAxLTIzLjY2Mi4wNDMtNy4wMjctNS4zMzItOC4yNTctOC4wMjQtNy45OTMtMTQuNTE2IDguNTM3LTQ2Ljg5MyAxNC40ODQtODQuNTIgMTQuNDg0LTM3LjYzMiAwLTcwLjAxMi01Ljk1Mi04NC41MjgtMTQuNDkzLTIuNDk3LS4yNi03LjYxOS45NzUtOC4xMzcgOC4wMDJaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4='; // Replace with the path to your white pawn image
+          square.appendChild(whitePawn);
+        } 
+        
+        else if (row === 0) {
+          const blackPiece = document.createElement('img')
+          blackPiece.src = chessData['figureImages']['black'][layout[col]]
+          square.appendChild(blackPiece)
+        } 
+        
+        else if (row === 7) {
+          const blackPiece = document.createElement('img')
+          blackPiece.src = chessData['figureImages']['white'][layout[col]]
+          square.appendChild(blackPiece)
         }
 
         chessboard.appendChild(square);
       }
     }
   });
-  </script>
+</script>
 
 
 </html>
