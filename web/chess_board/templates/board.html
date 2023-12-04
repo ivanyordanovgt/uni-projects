@@ -19,15 +19,21 @@
     <p>Page is not responsive <span>yet</span></p>
   </div>
 
+ 
+
 <div class="chessboard">
   <!-- Generate chessboard squares dynamically using JavaScript -->
-  
+</div>
+
+<div class="errorInfo" id="errorInfo">
+  <h1 style="color: red; width: 10vw;" id="errorInfoMessage">!!! If you see this you didn't open the file as a server! !!! </h1>
 </div>
 </body>
 
 
 <script type="module">
   import {chessData} from '../public/chessData.js'
+  const errorInfoRef = document.getElementById('errorInfoMessage')
   document.addEventListener('DOMContentLoaded', function () {
     const chessboard = document.querySelector('.chessboard');
     const layout = ['rook', 'knight', 'bishop', 'queen', 'king', 'rook', 'knight', 'bishop', 'queen']
@@ -63,6 +69,8 @@
         chessboard.appendChild(square);
       }
     }
+
+    errorInfoRef.innerHTML = ''
   });
 </script>
 
