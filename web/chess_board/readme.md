@@ -1,4 +1,6 @@
 # How to use
+To open, go to ```/templates``` and open ```board.html``` as a server.
+
 board.html should be opened as a server! Not as a file!
 If you want to open it as a file go to ```board.html``` and edit line 71 by commenting it
 
