@@ -27,7 +27,7 @@
 
 <div class="errorInfo" id="errorInfo">
   <h1 style="color: red; width: 10vw;" id="errorInfoMessage">!!! If you see this you didn't open the file as a server! !!! </h1>
-  <a href="#"> Click link for github readme guide </a>
+  <a href="https://github.com/ivanyordanovgt/uni-projects/blob/master/web/readme.md" id="githubLink"> Click link for github readme guide </a>
 </div>
 </body>
 
@@ -35,6 +35,7 @@
 <script type="module">
   import {chessData} from '../public/chessData.js'
   const errorInfoRef = document.getElementById('errorInfoMessage')
+  const errorInfoLinkRef = document.getElementById('githubLink')
   document.addEventListener('DOMContentLoaded', function () {
     const chessboard = document.querySelector('.chessboard');
     const layout = ['rook', 'knight', 'bishop', 'queen', 'king', 'rook', 'knight', 'bishop', 'queen']
@@ -72,6 +73,7 @@
     }
 
     errorInfoRef.innerHTML = ''
+    errorInfoLinkRef.innerHTML = ''
   });
 </script>
 
