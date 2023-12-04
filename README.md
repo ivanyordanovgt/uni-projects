@@ -2,6 +2,6 @@
 
 All my uni projects.
 
-🌐 [Web](web/web.md).
+🌐 [Web](web).
 ☕️ [Java](java/java.md).
 💻🔍 [C++](c++/c++.md).
