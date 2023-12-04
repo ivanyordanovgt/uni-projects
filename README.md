@@ -6,7 +6,7 @@ All my uni projects.
 ☕️ [Java](java/java.md).
 💻🔍 [C++](c++/c++.md).
 
-Dear Proffesor, here you can see all my projects in my studying in Plovdiv University. I have a lot of personal projects that are unfortunetly private because I will be monetizing them. I would love to show them and talk about them tho! They include:
+Dear Professor, here you can see all my projects in my studying in Plovdiv University. I have a lot of personal projects that are unfortunetly private because I will be monetizing them. I would love to show them and talk about them tho! They include:
 
 some of my projects are on youtube. Check them out.
 https://www.youtube.com/channel/UCboLPYQV8-ZquottAJcPTxg
