@@ -2,9 +2,9 @@
 
 All my uni projects.
 
-🌐 [Web](c++/c++.md).
-☕️ [Java](ANOTHER_README.md).
-💻🔍 [C++](ANOTHER_README.md).
+🌐 [Web](web/web.md).
+☕️ [Java](java/java.md).
+💻🔍 [C++](c++/c++.md).
 
 Dear Proffesor, here you can see all my projects in my studying in Plovdiv University. I have a lot of personal projects that are unfortunetly private because I will be monetizing them. I would love to show them and talk about them tho! They include:
 
